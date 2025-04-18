@@ -20,8 +20,8 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am a data scientist and develop ML models, <br className='sm:block hidden' />
-            perform data analysis, create insights, and integrate LangChain for building 
-            powerful AI-driven applications.
+            perform data analysis, create insights, and<br className='sm:block hidden' /> integrate LangChain for building 
+            powerful AI-driven<br className='sm:block hidden' /> applications.
           </p>
         </div>
       </div>
