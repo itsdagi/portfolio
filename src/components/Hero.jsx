@@ -20,18 +20,21 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am a data scientist and develop ML models, <br className='sm:block hidden' />
-            perform data analysis, and create insights.
+            perform data analysis, create insights, and integrate LangChain for building 
+            powerful AI-driven applications.
           </p>
         </div>
       </div>
 
       {/* Replace ComputersCanvas with the image */}
-      <div className='absolute inset-0 top-[300px] flex justify-end items-center pr-10'>
-        <img
-          src="/developer-pic-2.png"
-          alt="Developer"
-          className="w-[500px] h-auto object-contain rounded-lg"
-        />
+      <div className='absolute inset-0 top-[200px] flex justify-end items-center pr-10'>
+        <div className="max-w-[500px] w-full">
+          <img
+            src="/developer-pic-2.png"
+            alt="Developer"
+            className="w-full h-auto object-contain rounded-lg"
+          />
+        </div>
       </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
