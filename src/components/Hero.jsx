@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+// No need to import the image since it's in the public folder
 
 const Hero = () => {
   return (
@@ -16,16 +16,23 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
+            👋🏽, I'm <span className='text-[#915EFF]'>Dagim </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+            I am a data scientist and develop ML models, <br className='sm:block hidden' />
+            perform data analysis, and create insights.
           </p>
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* Replace ComputersCanvas with the image */}
+      <div className='absolute inset-0 top-[300px] flex justify-end items-center pr-10'>
+        <img
+          src="/developer-pic-2.png"
+          alt="Developer"
+          className="w-[500px] h-auto object-contain rounded-lg"
+        />
+      </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
