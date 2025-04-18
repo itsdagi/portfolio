@@ -14,27 +14,24 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
 
-        <div>
+        <div className="bg-[#050816] rounded-[20px] p-6 max-w-3xl">
           <h1 className={`${styles.heroHeadText} text-white`}>
-            👋🏽, I'm <span className='text-[#915EFF]'>Dagim </span>
-          </h1>
+            👋🏽, I'm <span className='text-[#FF4C4C]'>Dagim </span>
+          </h1> 
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            A data scientist and develop ML models, <br className='sm:block hidden' />
-            perform data analysis, create insights, and<br className='sm:block hidden' /> integrate LangChain for building 
-            powerful AI-driven<br className='sm:block hidden' /> applications.
+          I’m a data scientist with a passion for building machine learning models, developing <br className='sm:block hidden' />
+          AI-powered solutions, and exploring geospatial data to uncover meaningful insights.
           </p>
         </div>
       </div>
 
       {/* Replace ComputersCanvas with the image */}
-      <div className='absolute inset-0 top-[200px] flex justify-end items-center pr-10'>
-        <div className="max-w-[500px] w-full">
-          <img
-            src="/developer-pic-2.png"
-            alt="Developer"
-            className="w-full h-auto object-contain rounded-lg"
-          />
-        </div>
+      <div className='absolute inset-0 top-[300px] flex justify-end items-center pr-10'>
+        <img
+          src="/developer-pic-2.png"
+          alt="Developer"
+          className="w-[500px] h-auto object-contain rounded-lg"
+        />
       </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
