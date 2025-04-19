@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  qgis,
 } from "../assets";
 
 export const navLinks = [
@@ -42,6 +43,8 @@ export const navLinks = [
   {
     id: "Blog",
     title: "Blog",
+    external: true,
+    link: "https://dagim.notion.site/?pvs=4"
   },
 ];
 
@@ -76,6 +79,10 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "qgis",
+    icon: qgis,
   },
   {
     name: "TypeScript",

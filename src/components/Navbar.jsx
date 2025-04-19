@@ -26,9 +26,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -55,12 +53,23 @@ const Navbar = () => {
               className={`bg-[#050816] p-2 rounded-lg`}
               onClick={() => setActive(nav.title)}
             >
-              <a
-                href={`#${nav.id}`}
-                className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
-              >
-                {nav.title}
-              </a>
+              {nav.external ? (
+                <a
+                  href={nav.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
+                >
+                  {nav.title}
+                </a>
+              ) : (
+                <a
+                  href={`#${nav.id}`}
+                  className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
+                >
+                  {nav.title}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -84,17 +93,27 @@ const Navbar = () => {
                   key={nav.id}
                   className={`bg-[#050816] p-2 rounded-lg`}
                   onClick={() => {
-                    console.log("Active item:", nav.title);
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a
-                    href={`#${nav.id}`}
-                    className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
-                  >
-                    {nav.title}
-                  </a>
+                  {nav.external ? (
+                    <a
+                      href={nav.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
+                    >
+                      {nav.title}
+                    </a>
+                  ) : (
+                    <a
+                      href={`#${nav.id}`}
+                      className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
+                    >
+                      {nav.title}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

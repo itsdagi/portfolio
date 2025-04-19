@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       {/* Replace ComputersCanvas with the image */}
-      <div className='absolute inset-0 top-[300px] flex justify-end items-center pr-10'>
+      <div className='absolute inset-0 top-[430px] flex justify-end items-center pr-10'>
         <img
           src="/developer-pic-2.png"
           alt="Developer"
