@@ -56,7 +56,7 @@ const Navbar = () => {
               {nav.external ? (
                 <a
                   href={nav.link}
-                  target="_blank"
+                  target="_self"
                   rel="noopener noreferrer"
                   className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
                 >
