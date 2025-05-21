@@ -17,10 +17,10 @@ const ServiceCard = ({ index, title, icon }) => (
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full bg-ds-accent p-[1px] rounded-[20px] shadow-card' // Updated gradient to bg-ds-accent
     >
       <div
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='bg-ds-secondary-bg rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col' // Updated background
       >
         <img
           src={icon}
@@ -28,7 +28,7 @@ const ServiceCard = ({ index, title, icon }) => (
           className='w-16 h-16 object-contain'
         />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-ds-text-primary text-[20px] font-bold text-center'> {/* Updated text color */}
           {title}
         </h3>
       </div>
@@ -46,7 +46,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-ds-text-secondary text-[17px] max-w-3xl leading-[30px]' // Updated text color
       >
         I'm a skilled data science student with expertise in Python, R, Power BI, Streamlit, LangChain, and other tools. I have a passion for analyzing data, building predictive models, and creating interactive dashboards. I'm eager to collaborate on projects that leverage data to drive insights and solve real-world problems. Let's work together to turn data into actionable solutions!
       </motion.p>

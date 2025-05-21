@@ -33,7 +33,11 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experience", // Changed title to "Experience"
+  },
+  {
+    id: "projects", // Added new link for Projects
+    title: "Projects",
   },
   {
     id: "contact",
@@ -50,20 +54,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Data Scientist",
-    icon: web, // Replace with an appropriate icon
+    title: "Machine Learning", // Updated title
+    icon: web, // Icon is a placeholder (originally 'web')
   },
   {
-    title: "Machine Learning Engineer",
-    icon: mobile, // Replace with an appropriate icon
+    title: "Data Analysis & Visualization", // Updated title
+    icon: mobile, // Icon is a placeholder (originally 'mobile')
   },
   {
-    title: "AI Solutions Architect",
-    icon: backend, // Replace with an appropriate icon
+    title: "AI Development", // Updated title
+    icon: backend, // Icon is a placeholder (originally 'backend')
   },
   {
-    title: "Integrating AI Solutions with LangChain",
-    icon: creator, // Replace with an appropriate icon
+    title: "Big Data Technologies", // Updated title
+    icon: creator, // Icon is a placeholder (originally 'creator')
   },
 ];
 
@@ -131,7 +135,7 @@ const experiences = [
     title: "Data Science ",
     company_name: "Addis Ababa university",
     icon: starbucks,
-    iconBg: "#383E56",
+    iconBg: "#2D3748", // Reverted to hex: ds-secondary-bg
     date: "September 2024 - June 2026",
     points: [
       "Currently pursuing a Master's degree in Data Science, focusing on advanced data analysis, machine learning, and AI applications.",
@@ -144,7 +148,7 @@ const experiences = [
     title: "Computer Science",
     company_name: "Hawassa University",
     icon: tesla,
-    iconBg: "#E6DEDD",
+    iconBg: "#3182CE", // Reverted to hex: ds-accent
     date: "Sep 2018 - Aug 2022",
     points: [
       "Studied core computer science concepts, including algorithms, data structures, and software engineering principles.",
@@ -190,15 +194,15 @@ const projects = [
     tags: [
       {
         name: "python",
-        color: "blue-text-gradient",
+        color: "text-ds-accent", // Updated from blue-text-gradient
       },
       {
         name: "pandas",
-        color: "green-text-gradient",
+        color: "text-ds-highlight", // Updated from green-text-gradient
       },
       {
         name: "matplotlib",
-        color: "pink-text-gradient",
+        color: "text-ds-highlight", // Updated from pink-text-gradient
       },
     ],
     image: "https://via.placeholder.com/300", // Replace with an actual image URL
@@ -211,15 +215,15 @@ const projects = [
     tags: [
       {
         name: "machine learning",
-        color: "blue-text-gradient",
+        color: "text-ds-accent", // Updated from blue-text-gradient
       },
       {
         name: "scikit-learn",
-        color: "green-text-gradient",
+        color: "text-ds-highlight", // Updated from green-text-gradient
       },
       {
         name: "numpy",
-        color: "pink-text-gradient",
+        color: "text-ds-highlight", // Updated from pink-text-gradient
       },
     ],
     image: "https://via.placeholder.com/300", // Replace with an actual image URL
@@ -232,15 +236,15 @@ const projects = [
     tags: [
       {
         name: "deep learning",
-        color: "blue-text-gradient",
+        color: "text-ds-accent", // Updated from blue-text-gradient
       },
       {
         name: "tensorflow",
-        color: "green-text-gradient",
+        color: "text-ds-highlight", // Updated from green-text-gradient
       },
       {
         name: "keras",
-        color: "pink-text-gradient",
+        color: "text-ds-highlight", // Updated from pink-text-gradient
       },
     ],
     image: "https://via.placeholder.com/300", // Replace with an actual image URL

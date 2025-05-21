@@ -27,20 +27,20 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+        scrolled ? "bg-ds-primary-bg" : "bg-transparent" // Updated scrolled background
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center gap-2 bg-[#050816] p-2 rounded-lg'
+          className='flex items-center gap-2 bg-ds-secondary-bg p-2 rounded-lg' // Updated logo background
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>
+          <p className='text-ds-text-primary text-[18px] font-bold cursor-pointer flex'> {/* Updated logo text */}
             Dagim &nbsp;
             <span className='sm:block hidden'> | Data Scientist</span>
           </p>
@@ -50,7 +50,9 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`bg-[#050816] p-2 rounded-lg`}
+              className={`${
+                active === nav.title ? "text-ds-accent" : "text-ds-text-primary"
+              } hover:text-ds-highlight text-[18px] font-medium cursor-pointer bg-ds-secondary-bg p-2 rounded-lg`} // Updated link colors and background
               onClick={() => setActive(nav.title)}
             >
               {nav.external ? (
@@ -58,15 +60,11 @@ const Navbar = () => {
                   href={nav.link}
                   target="_self"
                   rel="noopener noreferrer"
-                  className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
                 >
                   {nav.title}
                 </a>
               ) : (
-                <a
-                  href={`#${nav.id}`}
-                  className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
-                >
+                <a href={`#${nav.id}`}>
                   {nav.title}
                 </a>
               )}
@@ -85,13 +83,15 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-ds-secondary-bg absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`} // Updated mobile menu background
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4 bg-[#000033] p-4 rounded-lg'>
+            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4 p-4 rounded-lg'> {/* Removed redundant background */}
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`bg-[#050816] p-2 rounded-lg`}
+                  className={`${
+                    active === nav.title ? "text-ds-accent" : "text-ds-text-primary"
+                  } font-poppins font-medium cursor-pointer text-[16px] hover:text-ds-highlight bg-ds-primary-bg p-2 rounded-lg`} // Updated mobile link colors and background
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
@@ -102,15 +102,11 @@ const Navbar = () => {
                       href={nav.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
                     >
                       {nav.title}
                     </a>
                   ) : (
-                    <a
-                      href={`#${nav.id}`}
-                      className='text-[#FFFDD0] text-[18px] font-medium cursor-pointer'
-                    >
+                    <a href={`#${nav.id}`}>
                       {nav.title}
                     </a>
                   )}
