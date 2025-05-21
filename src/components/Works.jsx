@@ -25,7 +25,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-ds-secondary-bg p-5 rounded-2xl sm:w-[360px] w-full' // Updated background
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -37,7 +37,7 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='bg-ds-accent w-10 h-10 rounded-full flex justify-center items-center cursor-pointer' // Updated GitHub icon background
             >
               <img
                 src={github}
@@ -49,8 +49,8 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-ds-text-primary font-bold text-[24px]'>{name}</h3> {/* Updated text color */}
+          <p className='mt-2 text-ds-text-secondary text-[14px]'>{description}</p> {/* Updated text color */}
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -72,14 +72,14 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} text-ds-text-secondary`}>My work</p> {/* Added text color */}
+        <h2 className={`${styles.sectionHeadText} text-ds-text-primary`}>Projects.</h2> {/* Added text color */}
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-ds-text-secondary text-[17px] max-w-3xl leading-[30px]' // Updated text color
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -98,4 +98,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects"); // Changed ID to "projects"
