@@ -27,13 +27,13 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-ds-primary-bg" : "bg-transparent" // Updated scrolled background
-      }`}
+        scrolled ? "bg-ds-primary-bg/90 backdrop-blur-md border-b border-ds-secondary-bg/30" : "bg-transparent" 
+      } transition-all duration-300 ease-in-out`} // Added glassmorphism, border, and transition for nav
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center gap-2 bg-ds-secondary-bg p-2 rounded-lg' // Updated logo background
+          className='flex items-center gap-2 p-2 rounded-lg' // Removed background from logo link container
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -51,8 +51,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-ds-accent" : "text-ds-text-primary"
-              } hover:text-ds-highlight text-[18px] font-medium cursor-pointer bg-ds-secondary-bg p-2 rounded-lg`} // Updated link colors and background
+                active === nav.title ? "text-ds-accent font-semibold" : "text-ds-text-primary font-medium"
+              } hover:text-ds-highlight text-[18px] cursor-pointer p-2 rounded-lg transition-colors duration-300 ease-in-out`} // Removed individual link background, added transitions and active font weight
               onClick={() => setActive(nav.title)}
             >
               {nav.external ? (
@@ -90,8 +90,8 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`${
-                    active === nav.title ? "text-ds-accent" : "text-ds-text-primary"
-                  } font-poppins font-medium cursor-pointer text-[16px] hover:text-ds-highlight bg-ds-primary-bg p-2 rounded-lg`} // Updated mobile link colors and background
+                    active === nav.title ? "text-ds-accent font-semibold" : "text-ds-text-primary font-medium"
+                  } font-poppins cursor-pointer text-[16px] hover:text-ds-highlight bg-ds-primary-bg p-2 rounded-lg transition-colors duration-300 ease-in-out`} // Added transition and active font weight to mobile links
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
