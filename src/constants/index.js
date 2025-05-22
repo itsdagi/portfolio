@@ -36,6 +36,10 @@ export const navLinks = [
     title: "Experience", // Changed title to "Experience"
   },
   {
+    id: "education", // Added Education link
+    title: "Education",
+  },
+  {
     id: "projects", // Added new link for Projects
     title: "Projects",
   },

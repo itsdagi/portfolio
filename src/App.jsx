@@ -11,7 +11,8 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        < Experience />
+        <Experience />
+        <Education /> {/* Added Education component */}
         <Tech />
         <Works />
         
