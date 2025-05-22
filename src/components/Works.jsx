@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projects, technologies } from "../constants"; // Imported technologies
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
@@ -16,16 +16,20 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  technologies, // Added technologies prop
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="group"> {/* Added group for group-hover effects */}
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className='bg-ds-secondary-bg p-5 rounded-2xl sm:w-[360px] w-full' // Updated background
+        className='bg-ds-secondary-bg p-5 rounded-2xl sm:w-[360px] w-full 
+                   transition-all duration-300 ease-in-out 
+                   hover:scale-105 hover:shadow-[0_0_20px_rgba(49,130,206,0.4)] 
+                   border border-ds-secondary-bg/60 hover:border-ds-accent/70' // Added transitions, hover effects, border
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -37,7 +41,8 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='bg-ds-accent w-10 h-10 rounded-full flex justify-center items-center cursor-pointer' // Updated GitHub icon background
+              className='bg-ds-accent w-10 h-10 rounded-full flex justify-center items-center cursor-pointer
+                         transition-transform duration-300 ease-in-out group-hover:scale-110' // Added GitHub icon hover effect
             >
               <img
                 src={github}
@@ -49,19 +54,24 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-ds-text-primary font-bold text-[24px]'>{name}</h3> {/* Updated text color */}
-          <p className='mt-2 text-ds-text-secondary text-[14px]'>{description}</p> {/* Updated text color */}
+          <h3 className='text-ds-text-primary font-bold text-[24px]'>{name}</h3>
+          <p className='mt-2 text-ds-text-secondary text-[14px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
+        <div className='mt-4 flex flex-wrap gap-3 items-center'> {/* Updated gap and items-center */}
+          {tags.map((tag) => {
+            const techData = technologies.find(t => t.name.toLowerCase() === tag.name.toLowerCase());
+            return (
+              <div key={`${name}-${tag.name}`} className='flex items-center gap-1 bg-ds-primary-bg/50 p-1 px-2 rounded-full'> {/* Pill style */}
+                {techData && techData.icon ? (
+                  <img src={techData.icon} alt={tag.name} className='w-4 h-4 object-contain' />
+                ) : null}
+                <p className={`text-[12px] ${techData ? 'text-ds-text-secondary' : tag.color}`}>
+                  {tag.name}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </Tilt>
     </motion.div>
@@ -72,14 +82,14 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-ds-text-secondary`}>My work</p> {/* Added text color */}
-        <h2 className={`${styles.sectionHeadText} text-ds-text-primary`}>Projects.</h2> {/* Added text color */}
+        <p className={`${styles.sectionSubText} text-ds-text-secondary`}>My work</p>
+        <h2 className={`${styles.sectionHeadText} text-ds-text-primary`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-ds-text-secondary text-[17px] max-w-3xl leading-[30px]' // Updated text color
+          className='mt-3 text-ds-text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -91,7 +101,7 @@ const Works = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} index={index} {...project} technologies={technologies} /> // Passed technologies prop
         ))}
       </div>
     </>
