@@ -9,6 +9,13 @@ import { SectionWrapper } from "../hoc";
 import { projects, technologies } from "../constants"; // Imported technologies
 import { fadeIn, textVariant } from "../utils/motion";
 
+// Swiper imports
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 const ProjectCard = ({
   index,
   name,
@@ -93,16 +100,51 @@ const Works = () => {
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
+          links to code repositories. It reflects my
           ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          and manage projects effectively. {/* Updated description slightly */}
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} technologies={technologies} /> // Passed technologies prop
-        ))}
+      {/* Replace the existing mapping div with Swiper */}
+      <div className='mt-20'> {/* Added a container for Swiper for potential padding/margin */}
+        <Swiper
+          modules={[Navigation, Pagination, A11y, Autoplay]} // Add Autoplay
+          spaceBetween={30} // Space between slides
+          slidesPerView={1} // Default to 1 slide for smaller screens
+          navigation // Enable navigation arrows
+          pagination={{ clickable: true }} // Enable clickable pagination dots
+          autoplay={{ delay: 5000, disableOnInteraction: false }} // Autoplay configuration
+          loop={true} // Enable looping
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 1024px
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          className="mySwiper" // Optional: for custom global styling if needed
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={`project-${index}`} style={{ height: 'auto' }}> {/* Ensure slides accommodate card height */}
+              <ProjectCard
+                index={index} // Pass index for motion.div variants
+                technologies={technologies} // Pass technologies array
+                {...project}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </>
   );

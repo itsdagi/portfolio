@@ -192,67 +192,73 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Data Analysis with Python",
-    description:
-      "A project showcasing data analysis techniques using Python, including data cleaning, visualization, and statistical analysis.",
+    name: "Semantic Book Recommender",
+    description: "An AI-powered system leveraging OpenAI's language models to provide intelligent book recommendations based on semantic understanding and user intent.",
     tags: [
-      {
-        name: "python",
-        color: "text-ds-accent", // Updated from blue-text-gradient
-      },
-      {
-        name: "pandas",
-        color: "text-ds-highlight", // Updated from green-text-gradient
-      },
-      {
-        name: "matplotlib",
-        color: "text-ds-highlight", // Updated from pink-text-gradient
-      },
+      { name: "Python", color: "text-ds-accent" },
+      { name: "Jupyter Notebook", color: "text-ds-highlight" },
+      { name: "OpenAI API", color: "text-ds-highlight" },
+      { name: "NLP", color: "text-ds-accent" },
     ],
-    image: "https://via.placeholder.com/300", // Replace with an actual image URL
-    source_code_link: "https://github.com/itsdagi/data-analysis-python",
+    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    source_code_link: "https://github.com/itsdagi/semantic-book-recommender",
   },
   {
-    name: "Machine Learning Models",
-    description:
-      "A collection of machine learning models implemented in Python, including regression, classification, and clustering algorithms.",
+    name: "NeuroDrive AI Simulator",
+    description: "Explore AI for autonomous driving with this open-source simulator. Interactively learn Neural Networks, KNN, and Decision Trees in a Pygame environment.",
     tags: [
-      {
-        name: "machine learning",
-        color: "text-ds-accent", // Updated from blue-text-gradient
-      },
-      {
-        name: "scikit-learn",
-        color: "text-ds-highlight", // Updated from green-text-gradient
-      },
-      {
-        name: "numpy",
-        color: "text-ds-highlight", // Updated from pink-text-gradient
-      },
+      { name: "Python", color: "text-ds-accent" },
+      { name: "Pygame", color: "text-ds-highlight" },
+      { name: "Neural Networks", color: "text-ds-accent" },
+      { name: "Machine Learning", color: "text-ds-highlight" },
     ],
-    image: "https://via.placeholder.com/300", // Replace with an actual image URL
-    source_code_link: "https://github.com/itsdagi/machine-learning-models",
+    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    source_code_link: "https://github.com/itsdagi/neurodrive_ai",
   },
   {
-    name: "Deep Learning with TensorFlow",
-    description:
-      "A project demonstrating deep learning techniques using TensorFlow, including neural networks and computer vision applications.",
+    name: "HIV Awareness Modeling",
+    description: "Statistical analysis of HIV awareness using R, employing cross-validation and bootstrap methods to ensure model robustness and reliability.",
     tags: [
-      {
-        name: "deep learning",
-        color: "text-ds-accent", // Updated from blue-text-gradient
-      },
-      {
-        name: "tensorflow",
-        color: "text-ds-highlight", // Updated from green-text-gradient
-      },
-      {
-        name: "keras",
-        color: "text-ds-highlight", // Updated from pink-text-gradient
-      },
+      { name: "R", color: "text-ds-accent" },
+      { name: "Statistics", color: "text-ds-highlight" },
+      { name: "Data Modeling", color: "text-ds-accent" },
     ],
-    image: "https://via.placeholder.com/300", // Replace with an actual image URL
-    source_code_link: "https://github.com/itsdagi/deep-learning-tensorflow",
+    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    source_code_link: "https://github.com/itsdagi/HIV_Awareness_Modeling_CV_Bootstrap",
+  },
+  {
+    name: "Worldometer Data Scraper",
+    description: "Automated web scraping project using Python and Beautiful Soup to extract and compile historical world population data from Worldometer.",
+    tags: [
+      { name: "Python", color: "text-ds-accent" },
+      { name: "Beautiful Soup", color: "text-ds-highlight" },
+      { name: "Web Scraping", color: "text-ds-accent" },
+    ],
+    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    source_code_link: "https://github.com/itsdagi/worldometer-scraped-data",
+  },
+  {
+    name: "Population Trends Visualization",
+    description: "Visualizing global population trends with Python, creating insightful line graphs to illustrate demographic changes over time.",
+    tags: [
+      { name: "Python", color: "text-ds-accent" },
+      { name: "Pandas", color: "text-ds-highlight" },
+      { name: "Matplotlib", color: "text-ds-highlight" },
+      { name: "Data Visualization", color: "text-ds-accent" },
+    ],
+    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    source_code_link: "https://github.com/itsdagi/World-population-line_graph-visualizations-python",
+  },
+  {
+    name: "Ethiopian PM2.5 Air Quality Analysis",
+    description: "Trend analysis of PM2.5 air quality data in Ethiopia for the year 2018, utilizing R for statistical insights and visualization.",
+    tags: [
+      { name: "R", color: "text-ds-accent" },
+      { name: "Data Analysis", color: "text-ds-highlight" },
+      { name: "Environmental Science", color: "text-ds-accent" },
+    ],
+    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    source_code_link: "https://github.com/itsdagi/Ethiopian-PM2.5-Trend-2018",
   },
 ];
 
