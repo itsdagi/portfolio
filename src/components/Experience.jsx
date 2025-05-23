@@ -26,7 +26,7 @@ const experienceData = [
     title: "AI Trainer",
     company_name: "Micro1",
     iconBg: themeColors.ds_accent, 
-    date: "Jan 2023 - Present", // Placeholder date, user can fill this
+    date: "May 2025 - Present", // Placeholder date, user can fill this
     points: [
       "Developed and curated high-quality datasets for training large language models (LLMs).",
       "Performed data annotation, labeling, and validation to ensure data accuracy.",
