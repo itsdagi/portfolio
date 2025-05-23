@@ -200,7 +200,7 @@ const projects = [
       { name: "OpenAI API", color: "text-ds-highlight" },
       { name: "NLP", color: "text-ds-accent" },
     ],
-    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    image: "https://unsplash.com/photos/gmOW_AUaLJI/download?force=true",
     source_code_link: "https://github.com/itsdagi/semantic-book-recommender",
   },
   {
@@ -212,7 +212,7 @@ const projects = [
       { name: "Neural Networks", color: "text-ds-accent" },
       { name: "Machine Learning", color: "text-ds-highlight" },
     ],
-    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    image: "https://unsplash.com/photos/MyjVReZ5GLQ/download?force=true",
     source_code_link: "https://github.com/itsdagi/neurodrive_ai",
   },
   {
@@ -223,7 +223,7 @@ const projects = [
       { name: "Statistics", color: "text-ds-highlight" },
       { name: "Data Modeling", color: "text-ds-accent" },
     ],
-    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    image: "https://unsplash.com/photos/2A0njRNSvk4/download?force=true",
     source_code_link: "https://github.com/itsdagi/HIV_Awareness_Modeling_CV_Bootstrap",
   },
   {
@@ -234,7 +234,7 @@ const projects = [
       { name: "Beautiful Soup", color: "text-ds-highlight" },
       { name: "Web Scraping", color: "text-ds-accent" },
     ],
-    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    image: "https://raw.githubusercontent.com/itsdagi/worldometer-scraped-data/main/Yearly-Population-change-and-.png",
     source_code_link: "https://github.com/itsdagi/worldometer-scraped-data",
   },
   {
@@ -246,7 +246,7 @@ const projects = [
       { name: "Matplotlib", color: "text-ds-highlight" },
       { name: "Data Visualization", color: "text-ds-accent" },
     ],
-    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    image: "https://images.unsplash.com/photo-1705646742193-d0ffd590193b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source_code_link: "https://github.com/itsdagi/World-population-line_graph-visualizations-python",
   },
   {
@@ -257,7 +257,7 @@ const projects = [
       { name: "Data Analysis", color: "text-ds-highlight" },
       { name: "Environmental Science", color: "text-ds-accent" },
     ],
-    image: "/src/assets/project_placeholder.svg", // Updated to SVG
+    image: "https://unsplash.com/photos/rLEM5X_sIiU/download?force=true",
     source_code_link: "https://github.com/itsdagi/Ethiopian-PM2.5-Trend-2018",
   },
 ];
