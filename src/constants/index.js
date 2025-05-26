@@ -216,6 +216,19 @@ const projects = [
     source_code_link: "https://github.com/itsdagi/neurodrive_ai",
   },
   {
+    name: "A 5-year colorectal cancer prediction model",
+    description: "Explore AI for autonomous driving with this open-source simulator. Interactively learn Neural Networks, KNN, and Decision Trees in a Pygame environment.",
+    tags: [
+      { name: "Python", color: "text-ds-accent" },
+      { name: "Pandas", color: "text-ds-highlight" },
+      { name: "Streamlit", color: "text-ds-highlight" },
+      { name: "Random forest Algorithm", color: "text-ds-accent" },
+      { name: "Machine Learning", color: "text-ds-highlight" },
+    ],
+    image: "https://images.unsplash.com/photo-1743767587738-ef68817838cf?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    source_code_link: "https://github.com/itsdagi/Predicting-five-year-survival-rates-of-colorectal-cancer-patients",
+  },
+  {
     name: "HIV Awareness Modeling",
     description: "Statistical analysis of HIV awareness using R, employing cross-validation and bootstrap methods to ensure model robustness and reliability.",
     tags: [
