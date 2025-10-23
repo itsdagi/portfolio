@@ -22,20 +22,40 @@ const themeColors = {
 };
 
 const experienceData = [
-  {
-    title: "AI Trainer",
+ {
+    title: "Prompt Engineer & Data Specialist",
     company_name: "Micro1",
     iconBg: themeColors.ds_accent, 
-    date: "May 2025 - Present", // Placeholder date, user can fill this
+    date: "May 2025 - Present",
     points: [
-      "Developed and curated high-quality datasets for training large language models (LLMs).",
-      "Performed data annotation, labeling, and validation to ensure data accuracy.",
-      "Collaborated with AI researchers and engineers to refine model performance.",
-      "Provided subject matter expertise for various AI projects.",
+      "Designed and optimized prompts for large language models (LLMs) to improve accuracy and contextual relevance for the OpenAI project at Micro1.",
+      "Collaborated with AI researchers and engineers to refine model performance and enhance response quality.",
+      "Provided subject matter expertise to guide prompt strategies and support AI project development at Micro1.",
     ],
-    // Placeholder for an actual icon for the timeline element.
-    // For now, a simple div is used in ExperienceCard.
-    // icon: <YourIconComponent /> or '/path/to/your/icon.png' 
+  },
+  {
+    title: "Spatial Data Analyst (Volunteer)",
+    company_name: "EDA-ETH Environmentalist Development Association, Ethiopia",
+    iconBg: themeColors.geo_accent, 
+    date: "Sep 2024 - Present",
+    points: [
+      "Collected, processed, and analyzed geospatial data to support environmental research and projects in Ethiopia.",
+      "Generated maps, visualizations, and reports to guide decision-making and project planning.",
+      "Collaborated with environmental scientists and project teams to ensure data accuracy and applicability.",
+      "Applied GIS and spatial analysis techniques to monitor and evaluate environmental initiatives.",
+    ],
+  },
+  {
+    title: "Programming Trainer (Part-time)",
+    company_name: "ICOG Labs",
+    iconBg: themeColors.dev_accent, 
+    date: "Feb 2022 - Nov 2024",
+    points: [
+      "Delivered hands-on training in Python and JavaScript web development to students and aspiring developers.",
+      "Designed curriculum and practical exercises to strengthen coding skills and problem-solving abilities.",
+      "Mentored learners through projects, debugging sessions, and coding challenges to ensure practical understanding.",
+      "Collaborated with team members to enhance training materials and learning outcomes.",
+    ],
   },
 ];
 
